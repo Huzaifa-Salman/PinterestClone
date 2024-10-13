@@ -1,0 +1,19 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Set the background color of the button -->
+    <solid android:color="#E60023"/> <!-- Button color (Pinterest red) -->
+
+    <!-- Set the border (stroke) -->
+<!--    <stroke-->
+<!--        android:width="0dp"-->
+<!--        android:color="#FFFFFF"/> &lt;!&ndash; White border &ndash;&gt;-->
+
+    <!-- Define rounded corners -->
+    <corners android:radius="40dp"/> <!-- Adjust radius for roundness -->
+
+    <!-- Optional: Add padding inside the button -->
+    <padding
+        android:left="10dp"
+        android:right="10dp"
+        android:top="5dp"
+        android:bottom="5dp"/>
+</shape>

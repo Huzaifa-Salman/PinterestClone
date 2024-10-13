@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:paddingHorizontal="40dp"
+    android:background="#000000"> <!-- Black background -->
+
+
+    <TextView
+        android:id="@+id/log_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center" />
+
+    <!-- Facebook Button -->
+    <Button
+        android:id="@+id/btn_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue with Facebook"
+        android:background="@drawable/rounded_button"
+        android:textColor="#ffffff"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#0000FF"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Google Button -->
+    <Button
+        android:id="@+id/btn_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue with Google"
+        android:background="@drawable/rounded_button"
+
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#A9A9A9"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Email EditText -->
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter email"
+        android:textColorHint="#808080"
+        android:textColor="#A9A9A9"
+        android:background="@drawable/rounded_edittext"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Password EditText -->
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter password"
+        android:textColorHint="#808080"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="#A9A9A9"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Log In Button -->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:textColor="#ffffff"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#E60023"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Forgot Password TextView -->
+    <TextView
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot password?"
+        android:textStyle="bold"
+        android:textColor="#A9A9A9"
+        android:layout_gravity="center" />
+</LinearLayout>

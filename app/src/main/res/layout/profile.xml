@@ -1,0 +1,128 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:padding="16dp">
+
+    <!-- Back Button & Share Icon -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Back"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="320dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Share"
+            android:src="@drawable/share" />
+    </LinearLayout>
+
+    <!-- Profile Picture -->
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_pinterest_logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Username -->
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Huzaifa"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Username handle -->
+    <TextView
+        android:id="@+id/username_handle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@huzaifach1981"
+        android:textColor="#888888"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Followers and Following -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 followers · 0 following"
+        android:textColor="#888888"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Edit Profile Button -->
+    <Button
+        android:id="@+id/btn_edit_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit profile"
+        android:backgroundTint="#555555"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:layout_marginBottom="24dp"
+        android:shape="rounded"/>
+
+    <!-- Tabs for Created and Saved -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Created"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved"
+            android:textColor="#888888"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:layout_marginLeft="32dp"/>
+    </LinearLayout>
+
+    <!-- Create Pin Button -->
+    <Button
+        android:id="@+id/btn_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        android:backgroundTint="#E50914"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:layout_marginTop="32dp"/>
+
+</LinearLayout>
