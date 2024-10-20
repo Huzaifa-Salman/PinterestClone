@@ -16,14 +16,14 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/back"
-            android:background="?attr/selectableItemBackground"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="Back"/>
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginLeft="320dp"
-            android:background="?attr/selectableItemBackground"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="Share"
             android:src="@drawable/share" />
     </LinearLayout>
@@ -83,8 +83,7 @@
         android:layout_marginTop="16dp"
         android:layout_gravity="center_horizontal"
         android:padding="10dp"
-        android:layout_marginBottom="24dp"
-        android:shape="rounded"/>
+        android:layout_marginBottom="24dp"/>
 
     <!-- Tabs for Created and Saved -->
     <LinearLayout

@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_welcome"
+        android:title="Welcome"
+        android:icon="@drawable/ic_pinterest_logo"/>
+
+    <item
+        android:id="@+id/nav_login"
+        android:title="Login"
+        android:icon="@drawable/ic_pinterest_logo"/>
+
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_pinterest_logo"/>
+
+    <item
+        android:id="@+id/nav_notifications"
+        android:title="Notifications"
+        android:icon="@drawable/ic_pinterest_logo"/>
+
+    <item
+        android:id="@+id/nav_saved"
+        android:title="Saved"
+        android:icon="@drawable/ic_pinterest_logo"/>
+
+    <item
+        android:id="@+id/nav_settings"
+        android:title="Settings"
+        android:icon="@drawable/ic_pinterest_logo"/>
+</menu>

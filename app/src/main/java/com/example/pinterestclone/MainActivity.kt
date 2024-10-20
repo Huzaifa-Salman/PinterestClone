@@ -1,47 +1,39 @@
 package com.example.pinterestclone
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.pinterestclone.ui.theme.PinterestCloneTheme
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            PinterestCloneTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+
+        setContentView(R.layout.welcome)  // yeh welcome.xml ko set karega
+
+        // Email input aur button ko findViewById se link kar rahe hain
+        val emailInput = findViewById<EditText>(R.id.email)
+        val loginButton = findViewById<Button>(R.id.loginButton)
+
+        // Login button pr click listener lagayenge
+        loginButton.setOnClickListener {
+            val email = emailInput.text.toString().trim()
+
+            // Email ko check karenge
+            if (email.isNotEmpty()) {
+                // Email correct hai to LoginActivity (login.xml) par redirect karein
+                val intent = Intent(this, LoginActivity::class.java)
+                intent.putExtra("EMAIL", email)  // Email ko next activity me bhejenge
+                startActivity(intent)
+            } else {
+                // Agar email khali ho to error message show karain
+                Toast.makeText(this, "Please enter your email address", Toast.LENGTH_SHORT).show()
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    PinterestCloneTheme {
-        Greeting("Android")
-    }
-}

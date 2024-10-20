@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PinterestClone</string>
+    <string name="enter_email">Enter email</string>
 </resources>

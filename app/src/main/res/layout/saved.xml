@@ -1,0 +1,143 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#121212">
+
+    <!-- Profile Picture and Tabs -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/profile_picture"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_pinterest_logo"
+            android:layout_marginRight="16dp"
+            android:contentDescription="Profile Picture" />
+
+        <!-- Tabs for Pins and Boards -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pins_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pins"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="?android:attr/selectableItemBackground" />
+
+            <TextView
+                android:id="@+id/boards_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boards"
+                android:textColor="#888888"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:layout_marginStart="16dp"
+                android:background="?android:attr/selectableItemBackground" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_pinterest_logo"
+            android:contentDescription="Search Icon" />
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search your Pins"
+            android:textColorHint="#888888"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:background="@null" />
+
+        <ImageView
+            android:id="@+id/add_pin"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_pinterest_logo"
+        android:contentDescription="Add Pin" />
+    </LinearLayout>
+
+    <!-- Filters (Grid View, Favorites, Created by you) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/grid_view_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_pinterest_logo"
+        android:contentDescription="Grid View Icon" />
+
+        <Button
+            android:id="@+id/favorites_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favorites"
+            android:background="@drawable/rounded_button"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="8dp"
+            android:padding="8dp"/>
+
+        <Button
+            android:id="@+id/created_by_you_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Created by you"
+            android:background="@drawable/rounded_button"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="8dp"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- RecyclerView for displaying Pins -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_pins"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:scrollbars="vertical"/>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        app:menu="@menu/bottom_nav_menu" />
+
+</LinearLayout>
